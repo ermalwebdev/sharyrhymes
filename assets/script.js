@@ -89,9 +89,11 @@ hamburgerMenu.addEventListener("click", function(e){
 		e.target.classList.toggle("menu_disabled")
 		hamburgerLines[1].classList.toggle('menu_disabled')
 		document.querySelector(".nav_list").style.display = "block";
+		document.querySelector("html").style.overflow = "hidden";
 	}else {
 		e.target.classList.add("menu_disabled")
 		hamburgerLines[0].classList.toggle('menu_disabled')
 		document.querySelector(".nav_list").style.display = "none";
+		document.querySelector("html").style.overflow = "scroll";
 	}
 })
