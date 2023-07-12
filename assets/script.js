@@ -9,7 +9,8 @@ const allAccordions = document.querySelectorAll(".accordion_item");
 const accordionCloseLine = document.querySelectorAll(
 	".accordion_line_horizontal"
 );
-
+const hamburgerMenu = document.querySelector(".hamburger_menu")
+const hamburgerLines = document.querySelectorAll('.fa-solid')
 //Header container slider
 sliderContainer.addEventListener("click", function (e) {
 	e.preventDefault();
@@ -80,3 +81,21 @@ var swiper = new Swiper(".mySwiper", {
 		clickable: true,
 	},
 });
+hamburgerMenu.addEventListener("click", function(e){
+	e.preventDefault();
+	const currentEl = e.target;
+	if(currentEl.getAttribute('data-set') >= 3) return;
+	if(Number(currentEl.getAttribute('data-set')) === 1){
+		e.target.classList.toggle("menu_disabled")
+		hamburgerLines[1].classList.toggle('menu_disabled')
+		document.querySelector(".nav_list").style.display = "block";
+		document.querySelector("html").style.overflowY = "hidden";
+		document.querySelector("body").style.overflowY = "scroll";
+	}else {
+		e.target.classList.add("menu_disabled")
+		hamburgerLines[0].classList.toggle('menu_disabled')
+		document.querySelector(".nav_list").style.display = "none";
+		document.querySelector("html").style.overflowY = "scroll";
+		document.querySelector("body").style.overflowY = "hidden";
+	}
+})

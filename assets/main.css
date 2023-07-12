@@ -4,9 +4,13 @@
 * {
 	box-sizing: border-box;
 }
+html {
+	overflow-y: scroll;
+}
 body {
 	margin: 0 auto;
 	background-color: #ffffff;
+	overflow-y: hidden;
 }
 h1,
 h2,
@@ -79,6 +83,9 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+.hamburger_menu {
+	display: none;
 }
 .nav_list,
 .logo_container {
@@ -740,6 +747,32 @@ footer {
 	/* iPads, Tablets */
 	.nav_list {
 		display: none;
+		position: absolute;
+		background-color: #f79489;
+		width:  50%;
+		height: 100vh;
+		z-index: 9;
+		top: 0;
+		right: 0;
+		padding: 4em 3em;
+	}
+	.nav_item:not(:last-child){
+		margin: 0 0 1em 0;
+	}
+	.hamburger_menu { 
+		display: block;
+		z-index: 10;
+		margin: 0 25px 0 auto;
+		text-decoration: none;
+	}
+	.fa-bars:before, .fa-navicon:before, .fa-close:before, .fa-multiply:before, .fa-remove:before, .fa-times:before, .fa-xmark:before  {
+		color: #ffffff;
+	}
+	.menu_disabled {
+		display: none!important;
+	}
+	.menu_active {
+		display: block;
 	}
 	.title_primary {
 		font-size: 22px;
