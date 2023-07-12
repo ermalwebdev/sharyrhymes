@@ -90,7 +90,7 @@ hamburgerMenu.addEventListener("click", function(e){
 		hamburgerLines[1].classList.toggle('menu_disabled')
 		document.querySelector(".nav_list").style.display = "block";
 		document.querySelector("html").style.overflowY = "hidden";
-		document.querySelector("body").style.overflowY = "scroll";
+		document.querySelector("body").style.overflowY = "hidden";
 	}else {
 		e.target.classList.add("menu_disabled")
 		hamburgerLines[0].classList.toggle('menu_disabled')
