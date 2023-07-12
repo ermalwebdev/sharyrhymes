@@ -5,12 +5,17 @@
 	box-sizing: border-box;
 }
 html {
-	overflow-y: scroll;
+	position: relative;
+	overflow: scroll;
+	scroll-behavior: smooth;
 }
 body {
+	width: 100%;
+	height: auto;
 	margin: 0 auto;
-	background-color: #ffffff;
-	overflow-y: hidden;
+	position: relative;
+	overflow: hidden;
+	scroll-behavior: smooth;
 }
 h1,
 h2,
