@@ -743,8 +743,7 @@ footer {
 		line-height: 18px;
 	}
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-	/* iPads, Tablets */
+@media screen and (max-width: 768px){
 	.nav_list {
 		display: none;
 		position: absolute;
@@ -774,6 +773,10 @@ footer {
 	.menu_active {
 		display: block;
 	}
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	/* iPads, Tablets */
+	
 	.title_primary {
 		font-size: 22px;
 		line-height: 40px;
